@@ -1,18 +1,18 @@
 import { useState } from "react";
-import LoginPage from "../../ensa-login/src/pages/LoginPage";
-import BiometriaPage from "../../ensa-login/src/pages/BiometriaPage";
+import LoginPage from "./pages/LoginPage";
+import BiometriaPage from "./pages/BiometriaPage";
 
 function App() {
   const [etapa, setEtapa] = useState("login");
 
   return (
-    <>
+    <div className="min-h-screen w-full">
       {etapa === "login" && (
         <LoginPage onLoginSuccess={() => setEtapa("biometria")} />
       )}
 
       {etapa === "biometria" && <BiometriaPage />}
-    </>
+    </div>
   );
 }
 
