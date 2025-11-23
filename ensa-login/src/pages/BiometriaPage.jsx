@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function BiometriaPage() {
+  const navigate = useNavigate();
   const videoRef = useRef(null);
   const [captured, setCaptured] = useState(null);
 
@@ -114,8 +116,18 @@ export default function BiometriaPage() {
             <img
               src={captured}
               alt="Rostro capturado"
-              className="w-full max-w-md rounded-2xl shadow-lg border border-white/40 mx-auto"
+              className="w-full max-w-md rounded-2xl shadow-lg border border-white/40 mx-auto mb-6"
             />
+            <button
+              onClick={() => {
+                // Simular validación biométrica exitosa
+                // En producción, aquí se enviaría la imagen al backend
+                navigate("/dashboard");
+              }}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 active:scale-95 rounded-xl font-semibold text-sm shadow-md transition-all text-white"
+            >
+              Continuar al Dashboard
+            </button>
           </>
         )}
       </div>

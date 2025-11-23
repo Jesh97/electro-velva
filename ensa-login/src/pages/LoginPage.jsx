@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ENSAButton from "../components/ENSAButton.jsx";
 
-export default function LoginPage({ onLoginSuccess }) {
+export default function LoginPage() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ user: "", pass: "" });
 
   const handleChange = (e) => {
@@ -10,7 +12,16 @@ export default function LoginPage({ onLoginSuccess }) {
 
   const handleLogin = () => {
     if (form.user.trim() && form.pass.trim()) {
-      onLoginSuccess();
+      // Simular login - guardar usuario en localStorage
+      const usuario = {
+        NOMBRE: form.user,
+        USERNAME: form.user,
+        EMAIL: `${form.user}@ensa.com`
+      };
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+      
+      // Navegar a dashboard
+      navigate("/dashboard");
     } else {
       alert("Complete los campos");
     }
