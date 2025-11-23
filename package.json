@@ -1,0 +1,22 @@
+{
+  "name": "electro-velva",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd ensa-login && npm start",
+    "build": "cd ensa-login && npm run build",
+    "dev": "cd ensa-login && npm start",
+    "install-deps": "cd ensa-login && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesh97/electro-velva.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesh97/electro-velva/issues"
+  },
+  "homepage": "https://github.com/Jesh97/electro-velva#readme",
+  "description": ""
+}

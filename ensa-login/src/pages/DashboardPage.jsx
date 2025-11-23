@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { 
-  ClipboardAlert, 
+  ClipboardList, 
   FileText, 
   TrendingUp, 
   Clock,
@@ -118,7 +118,7 @@ function DashboardPage() {
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
-                  <ClipboardAlert size={20} className="text-blue-600" />
+                  <ClipboardList size={20} className="text-blue-600" />
                   Incidentes Recientes
                 </h2>
                 <button

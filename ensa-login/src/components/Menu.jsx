@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
   Home,
-  ClipboardAlert,
+  ClipboardList,
   FileText,
   User,
   LogOut,
@@ -86,7 +86,7 @@ function Menu({ activeSection = "inicio", onSectionChange }) {
           {[
             { icon: Home, label: "Inicio", route: "/dashboard", key: "inicio" },
             {
-              icon: ClipboardAlert,
+              icon: ClipboardList,
               label: "Incidentes",
               route: "/incidentes",
               key: "incidentes",
