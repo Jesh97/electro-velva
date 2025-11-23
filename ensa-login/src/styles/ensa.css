@@ -6,6 +6,7 @@
   --ensa-white: #ffffff;
 }
 
+/* Fondo general */
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--ensa-light);
@@ -13,41 +14,61 @@ body {
   padding: 0;
 }
 
-.ensa-card {
-  width: 380px;
-  background: white;
-  padding: 32px;
-  border-radius: 14px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+/* Contenedor centrado */
+.pantalla-centrada {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* TARJETA */
+.ensa-card {
+  width: 420px;
+  background: white;
+  padding: 40px 36px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 28px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* Título */
 .ensa-title {
   color: var(--ensa-blue-dark);
   font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 24px;
+  margin-bottom: 28px;
+  font-size: 26px;
 }
 
+/* INPUTS */
 .ensa-input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 14px;
+  padding: 14px;
+  margin-bottom: 18px;
   border: 2px solid var(--ensa-blue);
-  border-radius: 8px;
-  font-size: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.2s ease;
 }
 
+.ensa-input:focus {
+  outline: none;
+  border-color: var(--ensa-green);
+  box-shadow: 0 0 0 3px rgba(97,177,47,0.3);
+}
+
+/* BOTÓN */
 .ensa-button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background-color: var(--ensa-blue-dark);
   color: white;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 17px;
   transition: 0.2s;
 }
 

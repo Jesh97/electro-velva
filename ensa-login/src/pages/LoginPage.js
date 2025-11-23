@@ -1,52 +1,26 @@
-import { useState } from "react";
-import ENSAButton from "../../../ensa-login/src/components/ENSAButton";
-import "../styles/ensa.css";
+return (
+  <div className="pantalla-centrada">
+    <div className="ensa-card">
 
-export default function LoginPage({ onLoginSuccess }) {
-  const [form, setForm] = useState({ user: "", pass: "" });
+      <h1 className="ensa-title">Acceso ENSA</h1>
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+      <input
+        className="ensa-input"
+        type="text"
+        name="user"
+        placeholder="Usuario"
+        onChange={handleChange}
+      />
 
-  const handleLogin = () => {
-    if (form.user.trim() && form.pass.trim()) {
-      onLoginSuccess();
-    } else {
-      alert("Complete los campos");
-    }
-  };
+      <input
+        className="ensa-input"
+        type="password"
+        name="pass"
+        placeholder="Contraseña"
+        onChange={handleChange}
+      />
 
-  return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100vh",
-      backgroundColor: "var(--ensa-light)"
-    }}>
-      <div className="ensa-card">
-
-        <h1 className="ensa-title">Acceso ENSA</h1>
-
-        <input
-          className="ensa-input"
-          type="text"
-          name="user"
-          placeholder="Usuario"
-          onChange={handleChange}
-        />
-
-        <input
-          className="ensa-input"
-          type="password"
-          name="pass"
-          placeholder="Contraseña"
-          onChange={handleChange}
-        />
-
-        <ENSAButton text="Iniciar sesión" onClick={handleLogin} />
-      </div>
+      <ENSAButton text="Iniciar sesión" onClick={handleLogin} />
     </div>
-  );
-}
+  </div>
+);
