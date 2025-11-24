@@ -44,8 +44,9 @@ function Menu({ activeSection = "inicio", onSectionChange }) {
     });
 
     if (result.isConfirmed) {
-      // SOLO FRONTEND — elimina datos locales
+      // Eliminar datos locales
       localStorage.removeItem("usuario");
+      localStorage.removeItem("token");
       setUsuario(null);
 
       await Swal.fire({
